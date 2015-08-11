@@ -1,0 +1,41 @@
+{
+  "name": "bookoread",
+  "description": "Book reader app",
+  "version": "0.0.0",
+  "author": "Vladimir Rodkin <mail@vovanr.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VovanR/bookoread.git"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "bower": "",
+    "gulp": "",
+    "gulp-add-src": "",
+    "gulp-concat": "",
+    "gulp-connect": "",
+    "gulp-csso": "",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jshint": "",
+    "gulp-postcss": "^5.1.10",
+    "gulp-requirejs": "",
+    "gulp-rev-append": "",
+    "gulp-uglify": "",
+    "jscs-jsdoc": "^1.1.0",
+    "jshint-stylish": "^1.0.2",
+    "postcss-clearfix": "^0.1.3",
+    "postcss-import": "^6.2.0",
+    "postcss-nested": "^0.3.2",
+    "postcss-simple-vars": "^0.3.0",
+    "yargs": ""
+  },
+  "bugs": {
+    "url": "https://github.com/VovanR/bookoread/issues"
+  },
+  "homepage": "https://github.com/VovanR/bookoread",
+  "license": "MIT",
+  "dependencies": {}
+}
