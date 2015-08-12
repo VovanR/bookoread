@@ -19,9 +19,9 @@ define([
     /**
      */
     var initialize = function () {
-        var currentPage = new CurrentPageModel();
-        window.book = new BookCollection({
-            currentPageModel: currentPage,
+        window.book = new BookCollection();
+        window.currentPage = new CurrentPageModel({
+            collection: book,
         });
         window.boov = new BookView({
             collection: book,

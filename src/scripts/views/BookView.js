@@ -38,20 +38,16 @@ define([
          * @return {jQuery}
          */
         render: function () {
-            console.log('BookView render');
-
             this.$el.empty();
 
-            var current = this.collection.getCurrent()
+            var current = this._current.getCurrent()
 
             if (!current) {
                 return;
             }
 
-            console.log('render');
-
             var page = new PageView({
-                model: this.collection.getCurrent(),
+                model: current,
             });
 
             this.$el.html(page.render());

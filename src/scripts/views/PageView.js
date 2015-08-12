@@ -28,9 +28,8 @@ define([
          * @param {PageModel} o.model
          */
         initialize: function () {
-            // this.listenTo(this.model, 'change:isCurrent', this._onCurrentChange);
-            console.log('1');
-            // this.listenTo(this.model, 'destroy', this.destroy);
+            this.listenTo(this.model, 'change:isCurrent', this._onCurrentChange);
+            this.listenTo(this.model, 'destroy', this.destroy);
 
         },
 
@@ -53,8 +52,10 @@ define([
         /**
          * @private
          */
-        _onCurrentChange: function (a) {
-            console.log(a);
+        _onCurrentChange: function () {
+            if (!this.model.get('isCurrent')) {
+                this.destroy();
+            }
         },
     });
 
