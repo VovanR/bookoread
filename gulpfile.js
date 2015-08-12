@@ -77,6 +77,7 @@ gulp.task('scripts', function () {
         paths: {
             text: '../../bower_components/requirejs-text/text',
             jqueryPerfectScrollbar: '../../bower_components/perfect-scrollbar/min/perfect-scrollbar.min',
+            marked: '../../bower_components/marked/marked.min',
 
             // Apps paths
             collections: './collections',
@@ -112,7 +113,7 @@ gulp.task('watch', function () {
     gulp.watch(['./src/index.html'], ['html']);
     gulp.watch(['./src/styles/**/*.styl'], ['styles', 'rev']);
     gulp.watch(['./src/scripts/**/*.js'], ['scripts', 'rev']);
-    gulp.watch(['./src/templates/**/*.tpl'], ['scripts', 'rev']);
+    gulp.watch(['./src/templates/**/*.html'], ['scripts', 'rev']);
 });
 
 gulp.task('build', ['styles', 'lint', 'scripts', 'html']);

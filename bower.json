@@ -19,7 +19,8 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs-text": "~2.0.12"
+    "requirejs-text": "~2.0.12",
+    "marked": "~0.3.5"
   },
   "devDependencies": {
     "perfect-scrollbar": "~0.5.9"
