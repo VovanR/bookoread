@@ -5,13 +5,15 @@ define([
     'collections/BookCollection',
     'models/CurrentPageModel',
     'views/BookView',
+    'views/PagerView',
 ], function (
     $,
     _,
     Backbone,
     BookCollection,
     CurrentPageModel,
-    BookView
+    BookView,
+    PagerView
 ) {
 
     'use strict';
@@ -25,6 +27,9 @@ define([
         });
         window.boov = new BookView({
             collection: book,
+            currentPageModel: currentPage,
+        });
+        window.pager = new PagerView({
             currentPageModel: currentPage,
         });
     };

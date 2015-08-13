@@ -51,19 +51,19 @@ define([
         setCurrent: function (number) {
             var _this = this;
 
-            var currentId = this.get('current');
-            if (!_.isNull(currentId)) {
-                this.collection.get(currentId).set('isCurrent', false);
-                this.set('current', null);
-            }
+            var oldCurrentId = this.get('current');
 
             var current = this.collection.findWhere({
                 number: number,
             });
+
             if (current) {
                 current.set('isCurrent', true);
                 current.fetch()
                     .done(function () {
+                        if (!_.isNull(oldCurrentId)) {
+                            _this.collection.get(oldCurrentId).set('isCurrent', false);
+                        }
                         _this.set('current', current.id);
                     })
             }
