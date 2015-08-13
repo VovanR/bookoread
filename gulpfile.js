@@ -16,6 +16,8 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer-core');
 var csso = require('gulp-csso');
 
+var ghPages = require('gulp-gh-pages');
+
 // Lint all modules:
 // $ gulp lint
 // Lint one module:
@@ -92,6 +94,11 @@ gulp.task('scripts', function () {
     })
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js'));
+});
+
+gulp.task('deploy', function () {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages());
 });
 
 gulp.task('rev', function () {

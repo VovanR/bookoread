@@ -22,7 +22,7 @@ define([
      */
     var BookCollection = Backbone.Collection.extend({
         model: PageModel,
-        url: '/pages.json',
+        url: 'pages.json',
     });
 
     return BookCollection;
