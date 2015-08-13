@@ -24,12 +24,12 @@ define([
             number: 0,
             isCurrent: false,
         },
-        urlRoot : '/pages',
+        urlRoot: '/pages',
         idAttribute: 'file',
 
         /**
          */
-        sync: function(method, model, options) {
+        sync: function (method, model, options) {
             options.dataType = 'text';
 
             return Backbone.sync(method, model, options);

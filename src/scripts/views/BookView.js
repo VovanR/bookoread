@@ -35,12 +35,11 @@ define([
         },
 
         /**
-         * @return {jQuery}
          */
         render: function () {
             this.$el.empty();
 
-            var current = this._current.getCurrent()
+            var current = this._current.getCurrent();
 
             if (!current) {
                 return;

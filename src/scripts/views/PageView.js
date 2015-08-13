@@ -21,16 +21,15 @@ define([
      * @alias module:PageView
      */
     var PageView = Backbone.View.extend({
-        className: 'page',
+        className: 'book-page',
 
         /**
          * @param {Oblect} o Options
          * @param {PageModel} o.model
          */
-        initialize: function () {
+        initialize: function (o) {
             this.listenTo(this.model, 'change:isCurrent', this._onCurrentChange);
             this.listenTo(this.model, 'destroy', this.destroy);
-
         },
 
         /**

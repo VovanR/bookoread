@@ -21,15 +21,15 @@ define([
     /**
      */
     var initialize = function () {
-        window.book = new BookCollection();
-        window.currentPage = new CurrentPageModel({
+        var book = new BookCollection();
+        var currentPage = new CurrentPageModel({
             collection: book,
         });
-        window.boov = new BookView({
+        var boov = new BookView({
             collection: book,
             currentPageModel: currentPage,
         });
-        window.pager = new PagerView({
+        var pager = new PagerView({
             currentPageModel: currentPage,
         });
     };

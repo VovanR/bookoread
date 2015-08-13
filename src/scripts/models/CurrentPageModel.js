@@ -23,15 +23,19 @@ define([
             current: null,
         },
 
+        /**
+         * @param {Object} o
+         * @param {BookCollection} o.collection
+         */
         initialize: function (o) {
             this.collection = o.collection;
             var _this = this;
 
             this.collection.fetch()
-                .done(function() {
+                .done(function () {
                     _this.setCurrent(1);
                 })
-                .fail(function() {
+                .fail(function () {
                     console.warn('fail');
                 });
         },
@@ -65,7 +69,7 @@ define([
                             _this.collection.get(oldCurrentId).set('isCurrent', false);
                         }
                         _this.set('current', current.id);
-                    })
+                    });
             }
         },
     });
