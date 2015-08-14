@@ -29,15 +29,6 @@ define([
          */
         initialize: function (o) {
             this.collection = o.collection;
-            var _this = this;
-
-            this.collection.fetch()
-                .done(function () {
-                    _this.setCurrent(1);
-                })
-                .fail(function () {
-                    console.warn('fail');
-                });
         },
 
         /**

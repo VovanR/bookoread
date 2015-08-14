@@ -21,7 +21,20 @@ define([
     var AppRouter = Backbone.Router.extend({
         /**
          */
-        initialize: function () {
+        initialize: function (o) {
+            this._current = o.currentPageModel;
+        },
+
+        routes: {
+            'page/:query': 'page',
+        },
+
+        /**
+         * @param {Number} page
+         * @public
+         */
+        page: function (page) {
+            this._current.setCurrent(parseInt(page, 10));
         },
     });
 
