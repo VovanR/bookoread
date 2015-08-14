@@ -24,7 +24,7 @@ define([
         className: 'book-page',
 
         /**
-         * @param {Oblect} o Options
+         * @param {Object} o Options
          * @param {PageModel} o.model
          */
         initialize: function (o) {

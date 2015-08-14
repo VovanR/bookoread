@@ -20,6 +20,8 @@ define([
      */
     var AppRouter = Backbone.Router.extend({
         /**
+         * @param {Object} o Options
+         * @param {CurrentPageModel} o.currentPageModel
          */
         initialize: function (o) {
             this._current = o.currentPageModel;

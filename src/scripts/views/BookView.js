@@ -24,7 +24,7 @@ define([
         el: '#book-container',
 
         /**
-         * @param {Oblect} o Options
+         * @param {Object} o Options
          * @param {CurrentPageModel} o.currentPageModel
          * @param {BookCollection} o.collection
          */

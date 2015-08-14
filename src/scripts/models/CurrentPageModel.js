@@ -24,7 +24,7 @@ define([
         },
 
         /**
-         * @param {Object} o
+         * @param {Object} o Options
          * @param {BookCollection} o.collection
          */
         initialize: function (o) {

@@ -24,7 +24,7 @@ define([
         el: '#book-pager',
 
         /**
-         * @param {Oblect} o Options
+         * @param {Object} o Options
          * @param {CurrentPageModel} o.currentPageModel
          */
         initialize: function (o) {
