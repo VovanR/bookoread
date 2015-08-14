@@ -24,7 +24,7 @@ define([
             number: 0,
             isCurrent: false,
         },
-        urlRoot: '/pages',
+        urlRoot: 'pages',
         idAttribute: 'file',
 
         /**
