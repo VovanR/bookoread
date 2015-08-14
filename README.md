@@ -3,7 +3,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Simple color palette ([Demo](http://vovanr.github.io/bookoread))
+> Book app ([Demo](http://vovanr.github.io/bookoread))
 
 ## Development
 
@@ -15,6 +15,11 @@ npm i
 ### Build dist
 ```sh
 gulp build
+```
+
+### Deploy
+```sh
+gulp deploy
 ```
 
 ### Run example
