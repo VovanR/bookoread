@@ -7,12 +7,12 @@ define([
     'jquery',
     'lodash',
     'backbone',
-    'marked',
+    'text!templates/PagerTemplate.html'
 ], function (
     $,
     _,
     Backbone,
-    marked
+    PagerTemplate
 ) {
 
     'use strict';
@@ -22,13 +22,28 @@ define([
      */
     var PagerView = Backbone.View.extend({
         el: '#book-pager',
+        template: _.template(PagerTemplate),
 
         /**
          * @param {Object} o Options
          * @param {CurrentPageModel} o.currentPageModel
+         * @param {BookCollection} o.collection
          */
         initialize: function (o) {
             this._current = o.currentPageModel;
+
+            this.listenTo(this._current, 'change:current', this._onChangeCurrent);
+
+            this.render();
+        },
+
+        /**
+         */
+        render: function () {
+            this.$el.html(this.template());
+
+            this._$prevWrap = this.$('.js-book-pager__prev-wrap');
+            this._$nextWrap = this.$('.js-book-pager__next-wrap');
         },
 
         events: {
@@ -63,6 +78,23 @@ define([
         _setNext: function () {
             var current = this._current.getCurrent().get('number');
             this._current.setCurrent(++current);
+        },
+
+        /**
+         * @private
+         */
+        _onChangeCurrent: function () {
+            var current = this._current.getCurrent().get('number');
+            var count = this.collection.length;
+
+            this._$prevWrap.removeClass('disabled');
+            this._$nextWrap.removeClass('disabled');
+
+            if (current === 1) {
+                this._$prevWrap.addClass('disabled');
+            } else if (current === count) {
+                this._$nextWrap.addClass('disabled');
+            }
         },
 
         /**

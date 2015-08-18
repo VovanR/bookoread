@@ -46,6 +46,7 @@ define([
             collection: book,
         });
         var pager = new PagerView({
+            collection: book,
             currentPageModel: currentPage,
         });
         var router = new AppRouter({
