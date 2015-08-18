@@ -5,6 +5,7 @@ define([
     'collections/BookCollection',
     'models/CurrentPageModel',
     'views/BookView',
+    'views/BookTitleView',
     'views/PagerView',
     'routers/AppRouter',
 ], function (
@@ -14,6 +15,7 @@ define([
     BookCollection,
     CurrentPageModel,
     BookView,
+    BookTitleView,
     PagerView,
     AppRouter
 ) {
@@ -39,6 +41,9 @@ define([
         var boov = new BookView({
             collection: book,
             currentPageModel: currentPage,
+        });
+        var bookTitle = new BookTitleView({
+            collection: book,
         });
         var pager = new PagerView({
             currentPageModel: currentPage,
