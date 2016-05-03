@@ -3,7 +3,9 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Book app ([Demo](http://vovanr.github.io/bookoread))
+> Book app
+
+Demo: [vovanr.github.io/bookoread](http://vovanr.github.io/bookoread)
 
 ## Development
 
